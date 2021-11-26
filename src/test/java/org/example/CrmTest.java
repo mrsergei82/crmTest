@@ -23,7 +23,7 @@ public class CrmTest {
         driver.findElement(By.id("prependedInput")).sendKeys(" Applanatest1");
         driver.findElement(By.id("prependedInput2")).sendKeys("Student2020!");
         driver.findElement(By.id("_submit")).click();
-        Assertions.assertFalse(driver.getTitle()=="Логин");
+        Assertions.assertTrue(driver.getCurrentUrl().equals("https://crm.geekbrains.space/"));
 
         driver.findElement(By.xpath("//*[@id=\"main-menu\"]/ul/li[@class=\"dropdown\"]/a[@class=\"unclickable\"]/span"))
                 .click();
